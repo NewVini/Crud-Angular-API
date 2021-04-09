@@ -1,0 +1,17 @@
+<p>Deseja remover o usuário?</p>
+
+<div *ngIf="user">
+    <div class="card" >
+        <div class="thumb-img">
+            <img src="{{user.avatar}}">
+        </div>
+        <div class="text-user">
+            <p> <b>Id:</b>  {{user.id}}</p>
+            <p> <b>Nome:</b>{{user.first_name}}  {{user.last_name}}</p>
+            <p> <b>E-mail:</b>{{user.email}}</p>
+        </div>
+    </div>
+    <button (click)="delete()" >Confirmar </button>
+    <button (click)="cancel()" >Cancelar </button>
+
+</div>

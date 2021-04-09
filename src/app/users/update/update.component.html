@@ -1,0 +1,12 @@
+<p>Atualizar usuário</p>
+
+<div *ngIf="request">
+    <label for="">Nome:
+        <input placeholder="Insira o nome" type="text" [(ngModel)]="request.name">
+    </label>
+    <label for="">Profissão:
+        <input placeholder="Insira a profissão" type="text" [(ngModel)]="request.job">
+    </label>
+    <button (click)="atualizar()" >Atualizar </button>
+
+</div>

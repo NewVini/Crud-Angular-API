@@ -1,0 +1,21 @@
+<h1>Usuários</h1>
+
+
+<div class="content"  *ngIf="responseUsers" >
+    <div class="card" *ngFor="let user of responseUsers.data">
+        <div class="thumb-img">
+            <img src="{{user.avatar}}">
+        </div>
+        <div class="text-user">
+            <p> <b>Id:</b>  {{user.id}}</p>
+            <p> <b>Nome:</b>{{user.first_name}}  {{user.last_name}}</p>
+            <p> <b>E-mail:</b>{{user.email}}</p>
+        </div>
+        <div class="buttons">
+                <button routerLink="/users/update/{{user.id}}">Editar</button>
+            
+                <button routerLink="/users/delete/{{user.id}}">Remover</button>
+            
+        </div>
+    </div>
+</div>
